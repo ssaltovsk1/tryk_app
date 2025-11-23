@@ -41,9 +41,10 @@ flutter run
 - Material Design 3 тема оформления
 - 5 образовательных модулей
 
-### ✅ Типы задач (2/8)
+### ✅ Типы задач (3/8)
 - **Single Choice** - Вопросы с одним правильным ответом
 - **Dialogue Choice** - Интерактивные чат-сценарии с последствиями
+- **Multiple Choice** - Вопросы с несколькими правильными ответами
 
 ### ✅ Система обучения
 - Прогресс-бар урока
@@ -53,9 +54,10 @@ flutter run
 
 ### 📊 Статистика MVP
 - **Модулей:** 5
-- **Демо-уроков:** 2 полностью функциональных
-- **Строк кода:** 3000+
-- **Виджетов:** 15+
+- **Демо-уроков:** 3 полностью функциональных
+- **Задач:** 5 (Single Choice, Dialogue Choice, Multiple Choice)
+- **Строк кода:** 3500+
+- **Виджетов:** 16+
 
 📖 Полное описание: [FEATURES.md](FEATURES.md)
 📋 План развития: [ROADMAP.md](ROADMAP.md)
@@ -99,7 +101,14 @@ The app features a flexible **Task Engine** that supports multiple task types:
    - Option to show images with choices
    - Shuffling support
 
-2. **Dialogue Choice**
+2. **Multiple Choice**
+   - Multiple correct answers selection
+   - Checkbox-based interface
+   - Two validation modes (strict/flexible)
+   - Partial credit scoring system
+   - Per-option feedback display
+
+3. **Dialogue Choice**
    - Chat-based interface
    - Animated message appearance
    - Multiple choice responses
