@@ -142,7 +142,22 @@ class LessonListPage extends StatelessWidget {
   }
 
   List<Lesson> _getDemoLessons(String moduleId) {
-    if (moduleId == '4') {
+    if (moduleId == '3') {
+      // Тренировка
+      return [
+        Lesson(
+          id: 'training_1',
+          moduleId: moduleId,
+          title: 'Безопасность в интернете',
+          description: 'Проверь свои знания о безопасном поведении онлайн',
+          difficulty: 2,
+          tasks: _getTrainingTasks(),
+          timeEstimate: 8,
+          points: 120,
+          iconName: 'quiz',
+        ),
+      ];
+    } else if (moduleId == '4') {
       // Детективный квест
       return [
         Lesson(
@@ -185,6 +200,123 @@ class LessonListPage extends StatelessWidget {
         timeEstimate: 5,
         points: 50,
         iconName: 'quiz',
+      ),
+    ];
+  }
+
+  List<Task> _getTrainingTasks() {
+    return [
+      Task(
+        id: 'training_q1',
+        lessonId: 'training_1',
+        type: TaskType.multipleChoice,
+        orderIndex: 0,
+        title: 'Безопасное поведение',
+        instructions: 'Выбери ВСЕ правильные ответы',
+        payload: {
+          'question': 'Какие из этих действий помогут защитить твою безопасность в интернете?',
+          'requireAllCorrect': true,
+          'partialCredit': true,
+          'options': [
+            {
+              'id': 'o1',
+              'text': 'Использовать сложные уникальные пароли для каждого сайта',
+              'isCorrect': true,
+              'feedback': 'Верно! Сложные пароли защищают твои аккаунты от взлома.',
+            },
+            {
+              'id': 'o2',
+              'text': 'Делиться паролями с лучшими друзьями',
+              'isCorrect': false,
+              'feedback': 'Неправильно! Никогда не делись паролями, даже с друзьями.',
+            },
+            {
+              'id': 'o3',
+              'text': 'Включить двухфакторную аутентификацию',
+              'isCorrect': true,
+              'feedback': 'Отлично! Это добавляет дополнительный уровень защиты.',
+            },
+            {
+              'id': 'o4',
+              'text': 'Проверять адрес сайта перед вводом личных данных',
+              'isCorrect': true,
+              'feedback': 'Правильно! Всегда проверяй, что находишься на настоящем сайте.',
+            },
+            {
+              'id': 'o5',
+              'text': 'Переходить по ссылкам из подозрительных писем',
+              'isCorrect': false,
+              'feedback': 'Нет! Такие ссылки могут вести на опасные сайты.',
+            },
+            {
+              'id': 'o6',
+              'text': 'Обновлять программы и приложения',
+              'isCorrect': true,
+              'feedback': 'Верно! Обновления часто содержат исправления безопасности.',
+            },
+          ],
+        },
+        hints: [
+          'Подумай, что делает твои аккаунты более защищенными',
+          'Безопасность - это не только пароли',
+          'Правильных ответов несколько!',
+        ],
+        explanation: 'Комплексный подход к безопасности включает сильные пароли, двухфакторную аутентификацию, проверку сайтов и регулярные обновления.',
+      ),
+      Task(
+        id: 'training_q2',
+        lessonId: 'training_1',
+        type: TaskType.multipleChoice,
+        orderIndex: 1,
+        title: 'Личная информация',
+        instructions: 'Выбери все виды информации, которую НЕ стоит публиковать в соцсетях',
+        payload: {
+          'question': 'Какую информацию НЕ стоит публиковать в открытом доступе?',
+          'requireAllCorrect': false,
+          'partialCredit': true,
+          'options': [
+            {
+              'id': 'o1',
+              'text': 'Домашний адрес',
+              'isCorrect': true,
+              'feedback': 'Правильно! Адрес - это конфиденциальная информация.',
+            },
+            {
+              'id': 'o2',
+              'text': 'Номер телефона',
+              'isCorrect': true,
+              'feedback': 'Верно! Номер телефона может быть использован мошенниками.',
+            },
+            {
+              'id': 'o3',
+              'text': 'Фото хобби',
+              'isCorrect': false,
+              'feedback': 'Фото хобби обычно безопасно публиковать.',
+            },
+            {
+              'id': 'o4',
+              'text': 'Расписание занятий',
+              'isCorrect': true,
+              'feedback': 'Правильно! Это может показать, когда ты не дома.',
+            },
+            {
+              'id': 'o5',
+              'text': 'Любимая книга',
+              'isCorrect': false,
+              'feedback': 'Это безопасная информация для публикации.',
+            },
+            {
+              'id': 'o6',
+              'text': 'Номер школы и класс',
+              'isCorrect': true,
+              'feedback': 'Верно! Это помогает идентифицировать тебя.',
+            },
+          ],
+        },
+        hints: [
+          'Личная информация - это то, что может помочь найти тебя в реальной жизни',
+          'Подумай, что может быть опасным в руках незнакомцев',
+        ],
       ),
     ];
   }
