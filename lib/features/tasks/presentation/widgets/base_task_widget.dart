@@ -52,7 +52,7 @@ abstract class BaseTaskState<T extends BaseTaskWidget> extends State<T> {
     widget.callbacks.onComplete(result);
 
     setState(() {
-      _isSubmitting = false,
+      _isSubmitting = false;
     });
   }
 
