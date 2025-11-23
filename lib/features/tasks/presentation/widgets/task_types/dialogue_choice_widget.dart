@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../core/theme/app_colors.dart';
+import '../../../../../core/theme/app_colors.dart';
 import '../../../domain/entities/task.dart';
 import '../../core/task_registry.dart';
 import '../base_task_widget.dart';
