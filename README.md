@@ -2,6 +2,66 @@
 
 An interactive educational Flutter application designed to teach children about cybersecurity and safe online behavior through engaging quizzes, detective quests, and interactive scenarios.
 
+---
+
+## 📚 Документация
+
+- **[SETUP.md](SETUP.md)** - Быстрый старт и установка приложения
+- **[FEATURES.md](FEATURES.md)** - Детальное описание всех реализованных функций
+- **[ROADMAP.md](ROADMAP.md)** - План развития проекта
+- **[DEVELOPMENT_GUIDE.md](DEVELOPMENT_GUIDE.md)** - Руководство по добавлению механик и контента
+- **[AI_INTEGRATION.md](AI_INTEGRATION.md)** - Интеграция AI в приложение
+
+---
+
+## 🎯 Быстрый старт
+
+```bash
+# 1. Клонировать репозиторий
+git clone <your-repo-url>
+cd tryk_app
+
+# 2. Установить зависимости
+flutter pub get
+
+# 3. Запустить приложение
+flutter run
+```
+
+📖 Подробная инструкция: [SETUP.md](SETUP.md)
+
+---
+
+## ✨ Что реализовано (MVP v1.0.0)
+
+### ✅ Базовая функциональность
+- Модульная архитектура с Clean Architecture принципами
+- Система навигации (Home → Lessons → Tasks)
+- Движок задач (Task Engine) с паттерном Registry
+- Material Design 3 тема оформления
+- 5 образовательных модулей
+
+### ✅ Типы задач (2/8)
+- **Single Choice** - Вопросы с одним правильным ответом
+- **Dialogue Choice** - Интерактивные чат-сценарии с последствиями
+
+### ✅ Система обучения
+- Прогресс-бар урока
+- Подсчет очков с штрафами за подсказки и попытки
+- Система подсказок
+- Диалог завершения урока со статистикой
+
+### 📊 Статистика MVP
+- **Модулей:** 5
+- **Демо-уроков:** 2 полностью функциональных
+- **Строк кода:** 3000+
+- **Виджетов:** 15+
+
+📖 Полное описание: [FEATURES.md](FEATURES.md)
+📋 План развития: [ROADMAP.md](ROADMAP.md)
+
+---
+
 ## 🎯 Features
 
 ### Implemented Screens
@@ -233,27 +293,31 @@ Task(
 - **Detective Quest**: `#F39C12` (Orange)
 - **Education**: `#3498DB` (Blue)
 
-## 🔄 Future Enhancements
+## 🔄 Что дальше?
 
-### Planned Task Types:
+### 🎯 Следующие этапы (Q1-Q2 2025)
 
-1. **Multiple Choice** - Select multiple correct answers
-2. **True/False** - Simple true or false questions
-3. **Match Pairs** - Connect related items
-4. **Drag and Drop Sequence** - Arrange items in correct order
-5. **Text Input** - Short text answer validation
-6. **Scenario Branching** - Interactive story with multiple paths
+1. **Расширенные типы задач** - Multiple Choice, True/False, Match Pairs, и др.
+2. **Система прогресса** - Сохранение результатов, профили пользователей
+3. **Геймификация** - Достижения, бейджи, уровни
+4. **AI интеграция** - Чат-помощник, персонализация, генерация контента
+5. **Родительский контроль** - Панель для родителей, отчеты
 
-### Planned Features:
+### 📋 Детальный план
 
-- User authentication and profiles
-- Progress tracking and persistence
-- Achievements and badges system
-- Parent dashboard
-- AI-powered chat assistant
-- Multiplayer challenges
-- Leaderboards
-- Certificate generation
+Полный план развития с датами и приоритетами: **[ROADMAP.md](ROADMAP.md)**
+
+### 🛠️ Хотите помочь?
+
+**Для разработчиков:**
+- Смотрите [DEVELOPMENT_GUIDE.md](DEVELOPMENT_GUIDE.md) - как добавлять новые механики и контент
+- Проверьте открытые Issues
+- Предложите новые типы задач
+
+**Для дизайнеров контента:**
+- Создавайте новые сценарии и вопросы
+- Улучшайте существующие уроки
+- Предлагайте новые модули обучения
 
 ## 📄 License
 
